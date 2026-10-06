@@ -1,7 +1,7 @@
 import { Platform, StyleSheet, Text, type TextProps } from 'react-native';
 
 import { Fonts, ThemeColor } from '@/constants/theme';
-import { useTheme } from '@/hooks/use-theme';
+import { useTheme } from '@/presentation/theme/hooks/use-theme';
 
 export type ThemedTextProps = TextProps & {
   type?: 'default' | 'title' | 'small' | 'smallBold' | 'subtitle' | 'link' | 'linkPrimary' | 'code';
@@ -47,9 +47,10 @@ const styles = StyleSheet.create({
     fontWeight: 500,
   },
   title: {
-    fontSize: 48,
+    fontSize: 32,
     fontWeight: 600,
     lineHeight: 52,
+    fontFamily: 'Kanit-Bold'
   },
   subtitle: {
     fontSize: 32,
